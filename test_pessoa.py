@@ -29,13 +29,15 @@ class TestePessoa(unittest.TestCase):
 
         pessoa_teste = Pessoa(nome, sobrenome, idade)
 
-        self.assertTrue(False)
+        self.assertTrue(
+            pessoa_teste.get_nome() == f'{nome} {sobrenome}'
+        )
 
     # Teste pegar idade
     def test_get_idade(self):
         nome = 'Danilo'
         sobrenome = 'Halfters'
-        idade = 18
+        idade = 20
 
         pessoa_teste = Pessoa(nome, sobrenome, idade)
 
